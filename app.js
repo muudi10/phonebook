@@ -11,7 +11,7 @@ const bodyParser = require("body-parser");
 const exp = require("constants");
 app.use(express.json());
 
-const APP_PORT = process.env || 5000;
+const APP_PORT = process.env.PORT || 5000;
 
 app.listen(APP_PORT, (req, res) => {});
 
