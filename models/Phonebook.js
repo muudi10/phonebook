@@ -1,7 +1,7 @@
 const db = require("../config/database");
 const Sequelize = require("sequelize");
 
-const Directory = db.define("phonebook", {
+const Directory = db.define("phonebookapp", {
   title: {
     type: Sequelize.STRING,
   },

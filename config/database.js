@@ -15,7 +15,7 @@ const path = require("path");
 
 // const { DB_USER, DB_NAME, PASSWORD, PORT, HOST } = process.env;
 
-module.exports = new Sequelize('phonebookapp', 'b8d79f1daeb050', '5b61b519', {
+module.exports = new Sequelize('phonebook', 'b8d79f1daeb050', '5b61b519', {
   host: 'us-cdbr-east-04.cleardb.com',
   port: 3306,
   dialect: "mysql",
