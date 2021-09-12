@@ -1,0 +1,22 @@
+const Sequelize = require("sequelize");
+
+const path = require("path");
+
+// // extract any command line arguments from argv
+// const args = process.argv.slice(2)[0];
+
+// // use args to determine if .env or .env.test should be loaded
+// const envFile = args === "test" ? "../.env" : "../.env.test";
+
+// // load environment variables from env files
+// require("dotenv").config({
+//   path: path.join(__dirname, envFile),
+// });
+
+// const { DB_USER, DB_NAME, PASSWORD, PORT, HOST } = process.env;
+
+module.exports = new Sequelize('phonebook', 'root', 'password', {
+  host: 'localhost',
+  port: 3307,
+  dialect: "mysql",
+});

@@ -1,0 +1,47 @@
+  <section id="add" class="container">
+    <div class="form-wrap">
+      <h1>Add A Contact</h1>
+      <p>Your contact details will be available to all hospital staff</p>
+      <form action="/dir/add" method="POST">
+  
+   <div class="input-group">
+     <label for="department"> Department</label>
+  <select class="input-box" name="department">
+  <option value="Blood Science">Blood Science</option>
+    ...
+  <option value="Urology">Urology</option>
+</select>
+    </select>
+        </div>
+        
+        <div class="input-group">
+          <label for="first_name">First Name</label>
+          <input type="text" name="first_name" id="first_name" class="input-box" placeholder="First Name"
+          maxlength="100">
+        </div>
+     
+        <div class="input-group">
+          <label for="last_name">Last Name</label>
+          <input type="text" name="last_name" id="last_name" class="input-box" placeholder="Last Name"
+          maxlength="100">
+        </div>
+        <div class="input-group">
+          <label for="telephone">Contact number</label>
+          <input type="text" name="telephone" id="telephone" class="input-box" placeholder="Contact telephone Number "
+          maxlength="100">
+        </div>
+
+        <div class="input-group">
+          <label for="pager">Bleeb Number</label>
+          <input type="text" name="pager" id="pager" class="input-box" placeholder="Bleeb number"
+          maxlength="100">
+        </div>      
+        <div class="input-group">
+          <label for="contact_email">Contact Email</label>
+          <input type="email" name="contact_email" id="contact_email" class="input-box" placeholder="Enter an email"
+            required>
+        </div>
+        <input type="submit" value="Submit contact" class="btn btn-reverse">
+      </form>
+    </div>
+  </section>

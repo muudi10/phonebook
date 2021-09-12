@@ -1,0 +1,27 @@
+
+
+
+<section id="gigs" class="container">
+  <h1>Contact Details</h1>
+
+  {{#each dir}}
+
+    <div class="gig">
+
+      <div> <p> First Name : {{first_name}}</p></div>
+      <div><p> Last Lame : {{last_name}}</p></div>
+      <div><p> Telephone: {{telephone}}</p></div>
+      <div> <p> Contact Email : {{contact_email}}</p></div>
+      <div> <p> Department : {{department}}</p></div>
+
+      <div>
+        {{#if pager}} Bleeb :{{pager}} {{else}} <p>No Pager provided </p>{{/if}}
+      </div>
+    </div>
+
+  {{else}}
+    <p>No contact found please modify your search</p>
+
+  {{/each}}
+</section>
+
