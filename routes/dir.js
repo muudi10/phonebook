@@ -27,10 +27,10 @@ router.get("/", (req, res) =>
 router.get("/add", (req, res) => res.render("add"));
 
 //Add contact details
-router.post("/add", (req, res) => {
+router.post = async("/add", (req, res) => {
   const { first_name, last_name, contact_email, telephone, pager, department } =
     req.body;
-  Directory.create({
+ await  Directory.create({
     first_name: first_name,
     last_name: last_name,
     telephone: telephone,
@@ -38,8 +38,8 @@ router.post("/add", (req, res) => {
     contact_email: contact_email,
     department: department,
   })
-    .catch((err) => console.log(err))
-    .then(res.render("success")).then(res.redirect('/'));
+await res.render('success')
+await res.redirect('/')
 });
 
 // Add search ,
