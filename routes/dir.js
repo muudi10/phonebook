@@ -39,7 +39,7 @@ router.post("/add", (req, res) => {
     department: department,
   })
     .catch((err) => console.log(err))
-    .then(res.redirect("/success"));
+    .then(res.render("success"));
 });
 
 // Add search ,
