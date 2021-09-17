@@ -14,8 +14,7 @@ const Directory = db.define("phonebook", {
   
   },
   department: {
-    type: Sequelize.STRING,
-  
+    type: Sequelize.STRING
   },
   specialty: {
     type: Sequelize.STRING,

@@ -11,7 +11,7 @@ const bodyParser = require("body-parser");
 const exp = require("constants");
 app.use(express.json());
 
-const APP_PORT = 5000;
+const APP_PORT = process.env.PORT || 5000;
 
 app.listen(APP_PORT, (req, res) => {});
 
@@ -29,6 +29,7 @@ app.get("/", (req, res) => res.render("index", { layout: "landing" }));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: false }));
 app.use("/dir", require("./routes/dir"));
+app.use("/dir/", require("./routes/add"));
 
 app.engine(
   "handlebars",
