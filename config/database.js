@@ -17,9 +17,9 @@ const path = require("path");
 
 const { DB_USER, DB_NAME, DB_PASSWORD, DB_PORT, DB_HOST } = process.env;
 
-module.exports = new Sequelize( DB_NAME, DB_USER, DB_PASSWORD, {
-  host: DB_HOST,
-  port: DB_PORT,
+module.exports = new Sequelize( 'phonebook', 'root','password', {
+  host: 'localhost',
+  port: 3307,
   dialect: "mysql",
 });
 

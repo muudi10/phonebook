@@ -52,8 +52,10 @@ router.post("/add", upload.single("inputImage"), async (req, res) => {
       department,
     } = req.body;
     const file = req.file;
-    const s3Results = await uploadFile(file);
-    console.log(s3Results.Location)
+    const {Location} = await uploadFile(file);
+   
+
+    console.log(Location)
     
 
     await Directory.create({
@@ -63,6 +65,7 @@ router.post("/add", upload.single("inputImage"), async (req, res) => {
       pager: pager,
       contact_email: contact_email,
       department: department,
+      imagepath: Location
    
     });
     await res.render('success')

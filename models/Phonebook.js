@@ -29,8 +29,11 @@ const Directory = db.define("phonebook", {
   },
   contact_email:{
       type:Sequelize.STRING,
-  }
+  },
 
+imagepath:{
+  type: Sequelize.STRING
+}
 
 });
 module.exports = Directory
