@@ -29,6 +29,7 @@ app.get("/", (req, res) => res.render("index", { layout: "landing" }));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: false }));
 app.use("/dir", require("./routes/dir"));
+app.use("/dir/", require("./routes/add"));
 
 app.engine(
   "handlebars",
