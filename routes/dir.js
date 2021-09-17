@@ -27,6 +27,7 @@ router.get("/", (req, res) =>
 router.get("/add", (req, res) => res.render("add"));
 
 //Add contact details
+<<<<<<< HEAD
 router.post("/add", (req, res) => {
   const { first_name, last_name, contact_email, telephone, pager, department } =
     req.body;
@@ -41,6 +42,21 @@ router.post("/add", (req, res) => {
     .catch((err) => console.log(err))
     .then(res.render("success"));
 });
+=======
+// router.post ("/add", (req, res) => {
+//   const { first_name, last_name, contact_email, telephone, pager, department } =
+//     req.body;
+//   Directory.create({
+//     first_name: first_name,
+//     last_name: last_name,
+//     telephone: telephone,
+//     pager: pager,
+//     contact_email: contact_email,
+//     department: department,
+//   }).then(res.render('success'))
+ 
+// });
+>>>>>>> c1d21356de74b8ff8106a081119022c6d36d9bff
 
 // Add search ,
 
