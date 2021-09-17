@@ -2,7 +2,7 @@
     <div class="form-wrap">
       <h1>Add A Contact</h1>
       <p>Your contact details will be available to all hospital staff</p>
-      <form action="/dir/add/" method="POST">
+      <form action="/dir/add/" method="POST" enctype="multipart/form-data">
   
    <div class="input-group">
      <label for="department"> Department</label>
@@ -40,6 +40,10 @@
           <label for="contact_email">Contact Email</label>
           <input type="email" name="contact_email" id="contact_email" class="input-box" placeholder="Enter an email"
             required>
+        </div>
+        <div class="input-group">
+          <label for="imageInput">Profile image</label>
+          <input type="file" name="inputImage" id="inputImage" class="input-box">
         </div>
         <input type="submit" value="Submit contact" class="btn btn-reverse">
       </form>
